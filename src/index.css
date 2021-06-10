@@ -1,13 +1,506 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
+.intro {
+  background-image: linear-gradient(
+    to right,
+    rgb(20, 45, 158),
+    rgb(38, 81, 146)
+  );
+  width: 100%;
+  height: 100%;
+  padding: 0 6em;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 1200px) {
+  .media-center {
+    text-align: center;
+  }
+}
+
+.menu {
+  padding-top: 50px !important;
+  height: auto;
+  font-size: 200%;
+}
+
+.btn-menu {
+  background: transparent;
+  color: white !important;
+  transition: transform 0.2s;
+  border-style: none;
+  margin: 0 5px;
+}
+
+.btn-menu:hover {
+  transform: scale(0.9);
+}
+
+.hero {
+  display: grid;
+  width: 100%;
+  margin-top: 50px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.intro-left {
+  border-right-style: ridge !important;
+  padding-right: "50px" !important;
+  text-align: left;
+}
+
+.intro-right {
+  padding-left: 50px !important;
+  text-align: left;
+}
+
+.btn-league {
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 120%;
+  width: 10em;
+  border-style: none;
+  transition: transform 0.2s;
+  padding: 20px 0;
+}
+
+.btn-league:hover {
+  transform: scale(0.9);
+}
+
+@media (max-width: 1200px) {
+  /* XL width */
+  .intro-left {
+    border-right-style: none !important;
+    border-bottom-style: ridge !important;
+    text-align: center;
+  }
+
+  .intro-right {
+    padding-left: 0 !important;
+    padding-top: 50px;
+    text-align: center;
+  }
+}
+
+.brand {
+  margin-bottom: 0;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.intro-para {
+  font-size: 20px;
+  margin: 40px 0;
+}
+
+/* FREE & LATEST Section !!!!!! */
+
+.free-latest {
+  align-items: center;
+  text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* STANDINGS INTRO !!!! */
+.standings-intro {
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 50px 0;
+  align-items: center;
+}
+
+.intro-separator {
+  border-right-style: ridge;
+  border-color: white;
+  text-align: center;
+  height: 100px;
+}
+
+.intro-content {
+  font-size: 20px;
+  margin: 7px 0;
+  margin-left: 20px;
+}
+
+.intro-btn {
+  border: none !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-left: 20px;
+  /* border-width: 5px !important; */
+  transition: transform 0.2s !important;
+}
+
+.intro-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .standings-intro {
+    text-align: center;
+  }
+  .intro-separator {
+    border-right-style: none;
+    border-top-style: ridge;
+    margin: 10px 150px;
+    height: 10px;
+  }
+}
+
+/* STANDINGS PAGE */
+.standings-panel {
+  background-color: white;
+  color: black;
+  font-weight: 100;
+  font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
+}
+
+.standings-title {
+  text-align: center;
+  padding-top: 30px;
+  /* border-bottom: 2px ridge white; */
+  font-weight: bold;
+  width: auto;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+}
+
+.standings-options {
+  font-size: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.standings-card-heading {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: lavender;
+  margin: 30px 5%;
+  padding: 30px 0;
+}
+
+.standings-box {
+  /* background-color: rgb(20, 45, 158); */
+  text-align: left;
+  color: black;
+  display: inline-block;
+  padding: 30px 10px;
+  margin-bottom: 50px;
+}
+
+.standings-table-cols {
+  background-color: rgb(21, 21, 156);
+  color: white;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.standings-record {
+  padding: 20px 0;
+  border-bottom: 2px ridge rgb(183, 183, 231);
+}
+
+@media (min-width: 768px) {
+  .standings-media {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .standings-title {
+    font-size: 50px;
+  }
+
+  .standings-card-heading {
+    margin: 30px 2%;
+  }
+}
+
+/* HIGHLIGHTS */
+.vid {
+  width: 60%;
+  height: 40%;
+  margin: auto auto;
+}
+
+.videos {
+  background: lavender;
+  font-family: "Noto Sans JP", sans-serif;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: black;
+}
+
+.body {
+  background-color: white;
+  /* background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+}
+
+.bg1 {
+  background-image: url("https://image.freepik.com/free-photo/grunge-wall-texture_1194-6386.jpg?4");
+  background-size: 100%;
+}
+
+.nav {
+  font-size: 3em !important;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.container {
+  padding: 0.5em 10em;
+  align-items: center;
+}
+
+.leaguecard {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5em;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 1em auto;
+  border-style: none !important;
+  border-radius: 1.5em !important;
+  transition: transform 0.2s;
+}
+
+.leaguecard:hover {
+  transform: scale(0.95);
+  background-color: lavender;
+}
+
+.leagueimg {
+  border-radius: 6em !important;
+}
+
+.linkbtn {
+  border-style: none !important;
+  color: black !important;
+  background-color: transparent !important;
+  font-size: 25px !important;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+
+.linkbtn:hover {
+  transform: scale(0.95);
+}
+
+.cardcontent {
+  display: flex;
+  align-items: center !important;
+}
+
+.card-links {
+  color: black;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+@media (max-width: 992px) {
+  .card-links {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-links {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .leaguecard:hover {
+    transform: scale(0.95);
+  }
+  .leagueimg {
+    border-radius: 1em;
+  }
+}
+
+.leaguebtn {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  background-color: darkblue !important;
+  border-style: none !important;
+}
+
+.leaguebtn:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+.leaguebtn:active {
+  border-style: outset !important;
+}
+
+@media (max-width: 576px) {
+  .overlay .text {
+    font-size: 1.5em;
+  }
+
+  .leaguebtn {
+    font-size: 10px !important;
+  }
+}
+
+.leagueImg {
+  width: 10em;
+  height: 10em;
+  margin: 0.5em 0;
+  border-radius: 5em;
+}
+
+.leagueHeading {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 800;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.matchbtn {
+  font-size: 1.5em !important;
+  width: 100%;
+  background-color: transparent !important;
+  color: black !important;
+  font-weight: 600 !important;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-style: none !important;
+  border-radius: 2em !important;
+}
+
+.matchbtn:focus .matchbtn.focus {
+  outline: 0 !important;
+  border-style: none !important;
+  box-shadow: none;
+}
+
+.matchbtn:hover {
+  background-color: rgb(21, 21, 156) !important;
+  color: white !important;
+}
+
+/* SCHEDULE */
+.league-dropdown {
+  background-color: white !important;
+  color: rgb(21, 21, 156) !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  border: blue ridge 5px !important;
+  border-radius: 10px !important;
+}
+
+.matchdaybtn {
+  border-radius: 0 !important;
+  border: none !important;
+  background-color: rgb(21, 21, 156) !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.matchdaybtn:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.team-name {
+  margin: 0 20px;
+  color: black;
+}
+
+/* TEAMS */
+
+.teamnum {
+  font-size: 30px;
+  margin-right: 50px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  text-align: left;
+}
+
+.clubname {
+  font-size: 30px;
+}
+
+.clubabb {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.clubInfoTitle {
+  font-size: 30px;
+  border-bottom: ridge rgb(21, 21, 156) 2px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.clubInfoContent {
+  font-size: 25px;
+  text-align: left;
+  color: rgb(75, 70, 70);
+  margin-bottom: 20px;
+}
+
+.squadbtn {
+  background-color: rgb(162, 162, 235) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+}
+
+.squadbtn:hover {
+  background-color: rgb(21, 21, 156) !important;
+}
+
+.contactClub {
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .clubInfoContent,
+  .clubInfoTitle {
+    text-align: center;
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .teamnum {
+    margin-right: 20px;
+  }
+}
+
+/* TEAMS */
+.position {
+  width: fit-content;
+  border-bottom: ridge rgb(21, 21, 156) 2px;
+  margin-bottom: 30px;
+  margin-left: 1%;
+}
+
+.player {
+  text-align: center;
+  border: 1px rgb(172, 172, 219) ridge;
+  margin: 10px 10px;
+  border-radius: 10px;
+}
+
+.player-name {
+  font-size: 28px;
+}
+
+.player-info {
+  font-size: 20px;
 }
