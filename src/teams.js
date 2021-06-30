@@ -40,7 +40,7 @@ const Teams = () => {
   const setActive = (code, name) => {
     if (code !== league.leagueCode) {
       setLeague({ ...league, leagueCode: code, leagueName: name });
-      setUrl(`http://api.football-data.org/v2/competitions/${code}/teams`);
+      setUrl(`https://api.football-data.org/v2/competitions/${code}/teams`);
     }
   };
 

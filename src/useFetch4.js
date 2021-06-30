@@ -13,7 +13,7 @@ const useFetch4 = (url) => {
     const data = await response.json();
     setData(data);
     setIsLoading(false);
-    console.log(data);
+    //console.log(data);
   };
 
   useEffect(() => {

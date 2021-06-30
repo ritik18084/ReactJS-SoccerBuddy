@@ -38,14 +38,14 @@ const Standings = () => {
     `https://api.football-data.org/v2/competitions/${league.leagueCode}/standings`
   );
 
-  const [standings, overall, home, away] = useFetch2(url);
-
+  const [standings, overall, home, away, isLoading] = useFetch2(url);
+  //console.log(home);
   useEffect(() => {
     //setData(standings);
     if (filter.filterName === "Overall") setCurrLeague(overall);
     else if (filter.filterName === "Home") setCurrLeague(home);
     else if (filter.filterName === "Away") setCurrLeague(away);
-  });
+  }, [isLoading, overall]);
 
   const setActive = (code, name) => {
     if (code !== league.leagueCode) {
@@ -61,7 +61,7 @@ const Standings = () => {
     else if (name === "Away") setCurrLeague(away);
   };
 
-  if (standings.length === 0) {
+  if (standings.length === 0 || currLeague === null) {
     return <div style={{ fontSize: "30px" }}>Loading</div>;
   } else
     return (

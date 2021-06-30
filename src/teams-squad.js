@@ -8,7 +8,7 @@ import NavBar from "./navBar";
 const TeamsSquad = () => {
   const location = useLocation();
   const id = location.state.id;
-  const url = `http://api.football-data.org/v2/teams/${id}`;
+  const url = `https://api.football-data.org/v2/teams/${id}`;
   var today = new Date();
   var day = String(today.getDate()).padStart(2, "0");
   var month = String(today.getMonth() + 1).padStart(2, "0");

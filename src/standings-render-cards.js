@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Col, Row } from "reactstrap";
 
 const RenderStandings = ({ standings }) => {
+  //console.log(standings);
   const [size, setSize] = useState(window.innerWidth);
   const checkSize = () => {
     setSize(window.innerWidth);
@@ -30,7 +31,7 @@ const RenderStandings = ({ standings }) => {
         </Row>
         {standings.map((record) => {
           let form = record.form;
-          if (form === "") form = "~";
+          if (form === null) form = "~,";
           let arr = form.split(",");
           return (
             <div key={record.position}>
